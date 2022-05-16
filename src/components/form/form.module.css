@@ -1,0 +1,239 @@
+.formBackdrop {
+    background-color: rgba(0, 0, 0, 0.502);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+}
+
+form {
+    max-width:50vw;
+    background-color: white;
+    position: fixed;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 35px;
+    border-radius: 5px;
+    animation: drop-down 0.5s ease-out;
+}
+
+@keyframes drop-down {
+ 0% {
+     opacity: 0;
+     transform: translate(-50%, -100%);
+     -ms-transform: translate(-50%, -100%);
+     -webkit-transform: translate(-50%, -100%);
+ }  
+ 100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}  
+}
+
+.closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.inputContainer {
+    width: 100%;
+}
+
+.inputContainer label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 3px 0;
+}
+
+.inputContainer > input {
+    width: 100%;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.submitBtn {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px 15px;
+    background-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1em;
+}
+
+.submitBtn:disabled {
+    background-color: lightgray;
+    color: gray;
+    border-color: darkgray;
+    cursor: not-allowed;
+}
+
+.range, .range > div {
+    display: inline;
+    padding: 0 3px;
+    background-color: white;
+}
+
+.range {
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+    padding: 0 3px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.range > div {
+    margin: 0 5px;
+    padding: 5px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+
+  input[type=range]:focus {
+    outline: none;
+  }
+
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent; 
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 19px;
+    width: 8px;
+    background: black;
+    cursor: pointer;
+    margin-top: -7px;
+    
+  }
+
+  input[type=range]::-moz-range-thumb {
+    border: 1px solid #000000;
+    height: 19px;
+    width: 8px;
+    background: black;
+    cursor: pointer;
+  }
+  
+  input[type=range]::-ms-thumb {
+    border: 1px solid #000000;
+    height: 19px;
+    width: 8px;
+    background: black;
+    cursor: pointer;
+  }
+
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: white;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }
+  
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: white;
+  }
+  
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: white;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    border-width: 16px 0;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: white;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: black;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: white;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+  
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: black;
+  }
+
+  input[type=color] {
+      min-height: 50px;
+      min-width: 100px;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  } 
+
+  .error {
+      background-color: rgba(255, 137, 137, 0.542);
+  }
+
+  .inputContainer p {
+      color: red;
+      margin: 0;
+      font-size: 0.8em;
+  }
+
+  .salaryOutput {
+      padding: 5px 0 0 0;
+  }
+
+  @media (max-width:660px) {
+    form {
+        min-width:90vw;
+    }
+  }
